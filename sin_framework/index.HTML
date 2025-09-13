@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan David Moran</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Enacbezado con titulo y barra de navegación-->
+    <header class="encabezado">
+        <h1>Juan David Moran Santiusty</h1>
+        <div class="contenedor">
+            <nav class="barra_navegacion">
+                    <button type="button" class="barra_opcion"><a href="#inicio">Inicio</a></button>
+                    <button type="button" class="barra_opcion"><a href="#estudios">Estudios</a></button>
+                    <button type="button" class="barra_opcion"><a href="#pasatiempos">Pasatiempos</a></button>
+                    <button type="button" class="barra_opcion"><a href="#proyectos">Proyectos</a></button>
+                    <button type="button" class="barra_opcion"><a href="#contacto">Contacto</a></button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Inicio con información personal-->
+    <div class="contenedor" id="inicio">
+        <div id="info_personal">
+            <h3> Hola, Soy Juan!</h3>
+            <p id="descripcion">Me llamo Juan David Moran Santiusty y nací el 03/10/2004 (3 de octubre del 2004). Mis expectativas en los próximos 6 años consisten en especializarme en arquitectura de software y trabajar como consultor.</p>
+        </div>
+        <div id="contenedor_imagen">
+            <img src="assets/images/juan.jpeg" alt="imagen_Juan">
+        </div>
+    </div>
+
+    <!-- Tabla de informacion de estudios-->
+    <div class="contenedor" id="estudios">
+        <h2>Estudios</h2>
+        <table>
+            <tr>
+                <th>Nivel</th>
+                <th>Institución</th>
+                <th>Años</th>
+                <th>Ubicación</th>
+            </tr>
+            <tr>
+                <td>Universidad</td>
+                <td>Universidad del Cauca</td>
+                <td>2022-2025</td>
+                <td>Popayan, Colombia</td>
+            </tr>
+        </table>
+    </div>
+    <!-- Pasatiempos-->
+    <div class="contenedor" id="pasatiempos">
+        <h2>Pasatiempos</h2>
+        <div class="carrusel-contenedor">
+            <div class="carrusel-imagen">
+                <img src="assets/images/leer.jpg" alt="Lectura">
+            </div>
+            <div class="carrusel-descripcion">
+                <h3>Lectura</h3>
+                <p>Disfruto perderme en la lectura, sobre todo con textos emocionantes y textos que abren mi mente a nuevas ideas y conocimientos. La lectura me permite explorar diferentes perspectivas y aprender constantemente.</p>
+            </div>
+        </div>
+        <div class="carrusel-controles">
+            <button id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+            <button id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+    <!-- Proyectos-->
+    <div class="contenedor" id="proyectos">
+        <h2>Proyectos</h2>
+        <div class="proyecto_item">
+            <img src="" alt="Proyecto 1">
+            <p class="descripcion_proyecto">Aplicación web para acciones</p>
+        </div>
+        <div class="proyecto_item">
+            <img src="" alt="Proyecto 2">
+            <p class="descripcion_proyecto">Paguina web Personal</p>
+        </div>
+    </div>
+
+    <!-- Formulario de contacto-->
+    <div class="form_contenedor" id="contacto">
+        <form id="contacto_Form">
+            <div class="form_grupo">
+                <label for="name">Nombre completo <span class="required">*</span></label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form_grupo">
+                <label for="email">Correo electrónico <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form_grupo">
+                <label for="phone">Teléfono</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            
+            <div class="form_grupo">
+                <label for="subject">Asunto de contacto <span class="required">*</span></label>
+                <select id="subject" name="subject" required>
+                    <option value="">Seleccione un asunto</option>
+                    <option value="consulta">Consulta general</option>
+                    <option value="soporte">Soporte técnico</option>
+                    <option value="entrevista">Entrevista</option>
+                    <option value="otros">Otros</option>
+                </select>
+            </div>
+            
+            <div class="form_grupo">
+                <label for="message">Mensaje <span class="required">*</span></label>
+                <textarea id="message" name="message" placeholder="Escriba su mensaje aquí..." required></textarea>
+            </div>
+            
+            <div class="checkbox_grupo">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">Acepto los <a href="#" class="terms-link">términos y condiciones</a> y la política de privacidad <span class="required">*</span></label>
+            </div>
+            <button type="submit">Enviar mensaje</button>
+        </form>
+    </div>
+
+    <script src="js/logicaCarrusel.js"></script>
+</body>
+</html>
