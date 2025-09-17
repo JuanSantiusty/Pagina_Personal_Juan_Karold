@@ -85,11 +85,6 @@
         <form id="contacto_Form">
 
             <div class="form_grupo">
-                <label for="ID">Identificación <span class="required">*</span></label>
-                <input type="number" id="id" name="id" required>
-            </div>
-
-            <div class="form_grupo">
                 <label for="name">Nombre completo <span class="required">*</span></label>
                 <input type="text" id="name" name="name" required>
             </div>
@@ -107,7 +102,6 @@
             <div class="form_grupo">
                 <label for="subject">Asunto de contacto <span class="required">*</span></label>
                 <select id="subject" name="subject" required>
-                    <option value="">Seleccione un asunto</option>
                     <option value="consulta">Consulta general</option>
                     <option value="soporte">Soporte técnico</option>
                     <option value="entrevista">Entrevista</option>
@@ -116,24 +110,24 @@
             </div>
     <div class="container">
         <div class="form_grupo">
-            <fieldset>
+            <fieldset id="preferencia">
                 <legend>Preferencia de contacto</legend>
                 
                 <div class="radio-container">
                     <div class="radio-option">
-                        <input type="radio" id="Opcion1" name="contacto" value="Opcion1" checked />
+                        <input type="radio" id="Opcion1" name="contactoOpcion" value="Email" checked />
                         <div class="radio-custom"></div>
                         <label for="Opcion1">Correo Electrónico</label>
                     </div>
 
                     <div class="radio-option">
-                        <input type="radio" id="Opcion2" name="contacto" value="Opcion2" />
+                        <input type="radio" id="Opcion2" name="contactoOpcion" value="Telefono" />
                         <div class="radio-custom"></div>
                         <label for="Opcion2">Teléfono</label>
                     </div>
 
                     <div class="radio-option">
-                        <input type="radio" id="Opcion3" name="contacto" value="Opcion3" />
+                        <input type="radio" id="Opcion3" name="contactoOpcion" value="WhatsApp" />
                         <div class="radio-custom"></div>
                         <label for="Opcion3">WhatsApp</label>
                     </div>
@@ -142,18 +136,23 @@
         </div>
             <div class="form_grupo">
                 <label for="mensaje">Mensaje</label>
-                <textarea name="mensaje" id="mensaje">
-                Escribe aqui tu mensaje ...
-                </textarea>
+                <textarea name="mensaje" id="mensaje"></textarea>
             </div>
             <div class="checkbox_grupo">
-                <input type="checkbox" id="terms" name="terms" required>
+                <input type="checkbox" id="terms" name="terms">
                 <label for="terms">Acepto los <a href="#" class="terms-link">términos y condiciones</a> y la política de privacidad <span class="required">*</span></label>
             </div>
-            <button type="submit">Enviar mensaje</button>
+            <button type="submit" id="enviarContacto">Enviar</button>
         </form>
     </div>
 
+    <!-- Capa acceso a datos -->
+    <script src="js/capaAccesoADatos/entidades/contacto.js"></script>
+    <script src="js/capaAccesoADatos/repositorios/contactoRepository.js"></script>
+    <!-- Servicios -->
+    <script src="js/servicios/fachadaContacto.js"></script>
+    <!-- Logica -->
     <script src="js/logicaCarrusel.js"></script>
+    <script src="js/logicaContacto.js"></script>
 </body>
 </html>
