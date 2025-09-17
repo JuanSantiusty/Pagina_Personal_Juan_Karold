@@ -36,3 +36,5 @@ class ContactoRepository {
         return indice;
     }
 }
+
+const contactoRepo = new ContactoRepository();

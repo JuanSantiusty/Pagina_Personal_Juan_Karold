@@ -114,7 +114,38 @@
                     <option value="otros">Otros</option>
                 </select>
             </div>
-            
+    <div class="container">
+        <div class="form_grupo">
+            <fieldset>
+                <legend>Preferencia de contacto</legend>
+                
+                <div class="radio-container">
+                    <div class="radio-option">
+                        <input type="radio" id="Opcion1" name="contacto" value="Opcion1" checked />
+                        <div class="radio-custom"></div>
+                        <label for="Opcion1">Correo Electrónico</label>
+                    </div>
+
+                    <div class="radio-option">
+                        <input type="radio" id="Opcion2" name="contacto" value="Opcion2" />
+                        <div class="radio-custom"></div>
+                        <label for="Opcion2">Teléfono</label>
+                    </div>
+
+                    <div class="radio-option">
+                        <input type="radio" id="Opcion3" name="contacto" value="Opcion3" />
+                        <div class="radio-custom"></div>
+                        <label for="Opcion3">WhatsApp</label>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+            <div class="form_grupo">
+                <label for="mensaje">Mensaje</label>
+                <textarea name="mensaje" id="mensaje">
+                Escribe aqui tu mensaje ...
+                </textarea>
+            </div>
             <div class="checkbox_grupo">
                 <input type="checkbox" id="terms" name="terms" required>
                 <label for="terms">Acepto los <a href="#" class="terms-link">términos y condiciones</a> y la política de privacidad <span class="required">*</span></label>
