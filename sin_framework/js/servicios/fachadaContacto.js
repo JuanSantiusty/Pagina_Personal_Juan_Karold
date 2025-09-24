@@ -21,7 +21,7 @@ class fachadaContacto{
         return nuevoContacto;
     }
     listarContactos(){
-        this.repo.getAll();
+        return this.repo.getAll();
     }
     eliminarContacto(id){
         return this.repo.remove(id);

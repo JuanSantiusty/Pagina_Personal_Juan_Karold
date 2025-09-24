@@ -484,3 +484,28 @@ legend {
     cursor: pointer;
     transition: color 0.3s ease;
 }
+
+#contenedorTabla button {
+    background-color: var(--color2);
+    color: var(--color5);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 20%;
+    transition: background-color 0.3s ease;
+}
+
+#contenedorTabla button:hover {
+    background-color: var(--color3);
+}
+
+#contenedorTabla button:hover {
+    background-color: var(--color3);
+}
+
+#tablaContactos button {
+    width: 100%;
+}

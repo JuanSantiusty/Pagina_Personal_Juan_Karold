@@ -136,7 +136,7 @@
         </div>
             <div class="form_grupo">
                 <label for="mensaje">Mensaje</label>
-                <textarea name="mensaje" id="mensaje"></textarea>
+                <textarea name="mensaje" id="mensajeCon"></textarea>
             </div>
             <div class="checkbox_grupo">
                 <input type="checkbox" id="terms" name="terms">
@@ -147,9 +147,19 @@
     </div>
 
     <!-- Tabla de Contactos-->
-    <div class="container">
-
-
+    <div class="container" id="contenedorTabla">
+        <h2>Tabla Contactos</h2>
+        <button type="button" id="actualizarContactos">Actualizar</button>
+        <button type="button" id="eliminarContactos">Eliminar</button>
+        <table id="tablaContactos">
+            <tr>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Telefono</th>
+                <th>Mensaje</th>
+                <th>Acciones</th>
+            </tr>
+        </table>
     </div>
 
     <!-- Capa acceso a datos -->

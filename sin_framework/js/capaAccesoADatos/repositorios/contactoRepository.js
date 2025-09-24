@@ -30,9 +30,10 @@ class ContactoRepository {
     }
     update(contacto){
         this.cargarAlmacenamiento();
-        if((indice = this.indiceElemento(contacto.id)) > 0){
-            contacto.fechaCreacion = this.repo[indice].fechaCreacion;
-            this.repo[indice] = contacto;
+        let indiceActualizar = this.indiceElemento(contacto.id);
+        if( indiceActualizar> 0){
+            contacto.fechaCreacion = this.repo[indiceActualizar].fechaCreacion;
+            this.repo[indiceActualizar] = contacto;
             this.guardarAlmacenamiento();
             return true;
         }
@@ -40,8 +41,9 @@ class ContactoRepository {
     }
     remove(id){
         this.cargarAlmacenamiento();
-        if((indice = this.indiceElemento(id) > 0)){
-            this.repo.splice(indice,1);
+        let indiceEliminar = this.indiceElemento(id)
+        if( indiceEliminar !== -1){
+            this.repo.splice(indiceEliminar,1);
             this.guardarAlmacenamiento();
             return true;
         }
@@ -54,9 +56,10 @@ class ContactoRepository {
 
     indiceElemento(id){
         this.cargarAlmacenamiento();
-        indice = -1;
-        for(i=0;i<this.repo.length;i++){
-            if(this.repo[i].id === id){
+        let indice = -1;
+        for(let i = 0; i < this.repo.length; i++){
+            // Convertir ambos a string para comparar
+            if(String(this.repo[i].id) === String(id)){
                 indice = i;
                 break;
             }
