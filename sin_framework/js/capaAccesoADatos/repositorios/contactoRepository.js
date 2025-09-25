@@ -1,3 +1,4 @@
+//** Repositorio que utiliza localStorage para guardar informacion de contacto */
 class ContactoRepository {
     constructor(){
         this.claveContactos = "contactos"

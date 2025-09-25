@@ -1,7 +1,9 @@
+//Evento DOM termina de cargarse
 document.addEventListener('DOMContentLoaded',function(){
     console.log("DOM cargado")
     const formulario = document.getElementById('contacto_Form');
 
+    //Evento para enviar información del formulario
     formulario.addEventListener('submit',function(e){
         e.preventDefault();
         //Conseguir elementos
@@ -14,6 +16,7 @@ document.addEventListener('DOMContentLoaded',function(){
         const mensaje = document.getElementById('mensajeCon').value;
         console.log(mensaje)
         const terminos = document.getElementById('terms').checked;
+        console.log(preferencia)
 
                 // Validar que los campos no estén vacíos
         if (!nombre || !correo || !telefono || !asunto || !mensaje) {
@@ -21,7 +24,7 @@ document.addEventListener('DOMContentLoaded',function(){
             showToast('Se deben llenar todos los campos', 'error');
             return;
         }
-
+                //Validar terminos y condiciones
         if (!terminos) {
             console.log("Falta terminos")
             showToast('Se deben aceptar los términos y condiciones', 'error');
@@ -41,13 +44,12 @@ document.addEventListener('DOMContentLoaded',function(){
         showToast('Contacto guardado correctamente', 'success');
         console.log("Contacto guerdado")
         formulario.reset();
-        // mostrarContactosEnTabla();
         } catch (error) {
         showToast('Error al guardar el contacto: ' + error.message, 'error');
         }
     });
 
-    // Evento para los botones eliminar
+    // Evento para los botones eliminar de cada fila en la tabla de contactos
     tablaContacto.addEventListener('click', function(e) {
         if (e.target.classList.contains('eliminarContactoBtn')) {
             const id = e.target.getAttribute('data-id');
@@ -83,6 +85,7 @@ const actualizarTablaContacto = document.getElementById('actualizarContactos');
 const eliminarContactos = document.getElementById('eliminarContactos');
 const tablaContacto = document.getElementById('tablaContactos');
 
+//Funcion para agregar una fila a la table de contactos
 function crearLineaTabla(id, nombre, correo, telefono, mensaje){
     const fila = document.createElement('tr');
     fila.setAttribute('data-id', id); // Agregar atributo con el ID
@@ -96,6 +99,7 @@ function crearLineaTabla(id, nombre, correo, telefono, mensaje){
     tablaContacto.appendChild(fila);
 }
 
+//Funcion para eliminar todas las filas exepto el encabezado de la tabla de contactos
 function limpiarTabla(){
     let numFilas = tablaContacto.rows.length;
     while (numFilas > 1) {
@@ -104,15 +108,24 @@ function limpiarTabla(){
     }
 }
 
-actualizarTablaContacto.addEventListener('click',function(){
+//Funcion para cargar los datos de los contactos en la tabla
+function cargarDatosTabla() {
     limpiarTabla();
     const contactos = fachadaCon.listarContactos();
     for (const contacto of contactos) {
         crearLineaTabla(contacto.id,contacto.nombre,contacto.correo,contacto.telefono,contacto.mensaje);
     }
-    showToast('Contactos Actualizados','success');
-});
+    
+}
 
+//Evento para actualizar la tabla de contactos
+actualizarTablaContacto.addEventListener('click',() => {
+    cargarDatosTabla()
+    showToast('Contactos Actualizados','success');
+}
+);
+
+//Evento para eliminar toda la información de los contcatos
 eliminarContactos.addEventListener('click',function(){
     bandera = confirm("¿ Esta seguro de eliminar todos los contactos ?");
     if(bandera){
@@ -144,3 +157,5 @@ function eliminarContactoEspecifico(id) {
         }
     }
 }
+
+cargarDatosTabla()

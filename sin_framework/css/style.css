@@ -438,6 +438,10 @@ legend {
     /* Ocultamos el radio button nativo */
     opacity: 0;
     position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
 
 .radio-custom {
@@ -483,6 +487,7 @@ legend {
     color: #495057;
     cursor: pointer;
     transition: color 0.3s ease;
+    user-select: none;
 }
 
 #contenedorTabla button {

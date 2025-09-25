@@ -1,3 +1,4 @@
+//Informacion de pasatiempos
 const pasatiempos = [
     {
         imagen: "assets/images/leer.jpg",
@@ -22,6 +23,7 @@ const descripcionCarrusel = document.querySelector('.carrusel-descripcion p');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 
+//Funcion para actualizar el carrusel de imagenes
 function actualizarCarrusel() {
     imagenCarrusel.src = pasatiempos[indiceActual].imagen;
     imagenCarrusel.alt = pasatiempos[indiceActual].titulo;
@@ -29,11 +31,13 @@ function actualizarCarrusel() {
     descripcionCarrusel.textContent = pasatiempos[indiceActual].descripcion;
 }
 
+//Boton para ver pasatiempo previo
 prevBtn.addEventListener('click', () => {
     indiceActual = (indiceActual - 1 + pasatiempos.length) % pasatiempos.length;
     actualizarCarrusel();
 });
 
+//Boton para ver el siguiente pasatiempo
 nextBtn.addEventListener('click', () => {
     indiceActual = (indiceActual + 1) % pasatiempos.length;
     actualizarCarrusel();
