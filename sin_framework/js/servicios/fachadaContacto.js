@@ -1,3 +1,4 @@
+/** Clase fachada que utiliza el repositorio*/
 class fachadaContacto{
     constructor(repo){
         this.repo = repo;
