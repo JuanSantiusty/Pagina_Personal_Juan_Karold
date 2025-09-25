@@ -3,176 +3,382 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karold Delgado</title>
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Bootstrap-->
+    <title>Karold Delgado - Página Personal</title>
+    
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="validacion.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Toastify CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="css/custom.css">
+
 </head>
 <body>
-
-<!-- Encabezado con botenes a las diferentes secciones-->
-    <header>
+    <!-- HEADER -->
+    <header class="header-personal">
         <div class="container-fluid">
-            <div class="align-items-center">
-                <h1>Nombre</h1>
-                <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-                    <div class="container-fluid">      
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNav">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#inicio">Inicio</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#estudios">Estudios</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#pasatiempos">Pasatiempos</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#proyectos">Proyectos</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#contacto">Contacto</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
+            <div class="text-center py-4">
+                <h1 class="display-4 fw-bold text-white">Karold Delgado</h1>
             </div>
         </div>
     </header>
 
-<!-- Información peronal-->
-<section class="container-fluid" id="inicio">
-    <div class="card mb-3" style="max-width: 1000px;">
-        <div class="row g-0">
-            <div class="col-md-5">
-                <img src="" class="img-fluid rounded-start" alt="Imagen Karold">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#estudios">Estudios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pasatiempos">Pasatiempos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#proyectos">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
             </div>
-            <div class="col-md-7">
-                <div class="card-body">
-                    <h5 class="card-title">Nombre</h5>
-                    <p class="card-text">Descripción</p>
+        </div>
+    </nav>
+
+    <!-- SECCIÓN 1: INICIO -->
+    <section class="container-fluid py-5" id="inicio">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <div class="info-personal">
+                        <h2 class="section-title">Información Personal</h2>
+                        <div class="personal-details">
+                            <p><strong>Nombre:</strong> Karold Dirley Delgado Arciniegas</p>
+                            <p><strong>Fecha de nacimiento:</strong> 7 de mayo de 2003</p>
+                            <div class="expectations mt-4">
+                                <h4>Mis expectativas como profesional</h4>
+                                <p class="lead">
+                                    Como futura ingeniera de sistemas, aspiro convertirme en una analista de sistemas competente y
+                                    creativa. Mi objetivo es diseñar soluciones tecnológicas que optimicen procesos empresariales
+                                    y mejoren la experiencia del usuario.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div class="photo-container">
+                        <img src="assets/images/perfil.jpeg" alt="Karold Delgado" 
+                             class="img-fluid rounded-circle profile-photo">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Tabla con información de estudios-->
-<section class="container-fluid" id="estudios">
-<table class="table">
-    <thead>
-        <tr>
-            <th scope="col">Nivel</th>
-            <th scope="col">Institución</th>
-            <th scope="col">Años</th>
-            <th scope="col">Ubicación</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th scope="row">lala</th>
-            <td>pepe</td>
-            <td>cosito</td>
-            <td>cosita</td>
-        </tr>
-    </tbody>
-</table>
-</section>
-
-<!-- Carrusel de imagenes para pasatiempos-->
-
-<section class="container-fluid" id="pasatiempos">
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="../sin_framework/assets/images/cinema_.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Pasatiempo 1</h5>
-                    <p>Descripción</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="../sin_framework/assets/images/cinema_.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Pasatiempo 2</h5>
-                    <p>Descripción</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="../sin_framework/assets/images/cinema_.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Pasatiempo 3</h5>
-                    <p>Descripción</p>
+    <!-- SECCIÓN 2: ESTUDIOS -->
+    <section class="container-fluid py-5 bg-light" id="estudios">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Trayectoria Educativa</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover">
+                            <thead class="table-primary">
+                                <tr>
+                                    <th scope="col">Nivel</th>
+                                    <th scope="col">Institución</th>
+                                    <th scope="col">Años</th>
+                                    <th scope="col">Ubicación</th>
+                                    <th scope="col">Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Universidad</td>
+                                    <td>Universidad del Cauca - Ingeniería de Sistemas</td>
+                                    <td>2021-2025</td>
+                                    <td>Popayán, Colombia</td>
+                                    <td><span class="badge bg-success">En curso</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Bachillerato</td>
+                                    <td>Institución Educativa Normal Superior del Putumayo</td>
+                                    <td>2015-2020</td>
+                                    <td>Putumayo, Colombia</td>
+                                    <td><span class="badge bg-primary">Completado</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Primaria</td>
+                                    <td>Institución Educativa Almirante Padilla</td>
+                                    <td>2009-2014</td>
+                                    <td>Putumayo, Colombia</td>
+                                    <td><span class="badge bg-primary">Completado</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-</section>
+    </section>
 
-<!-- Tarjetas con Proyectos-->
+    <!-- SECCIÓN 3: PASATIEMPOS -->
+    <section class="container-fluid py-5" id="pasatiempos">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Mis Pasatiempos</h2>
+            <div id="carouselPasatiempos" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselPasatiempos" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselPasatiempos" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselPasatiempos" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/images/lectura.jpeg" class="d-block w-100 img-fluid carousel-image" alt="Lectura">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Lectura</h5>
+                            <p>Mi mayor pasatiempo es la lectura. Me gusta porque me distraigo con las historias y me relajo. 
+                               Disfruto especialmente de los libros de ciencia ficción y desarrollo personal.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/taekwondo.png" class="d-block w-100 img-fluid carousel-image" alt="Taekwondo">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Taekwondo</h5>
+                            <p>Soy principiante así que manejo los golpes básicos. Me gusta porque quiero ser flexible y 
+                               aprender a defenderme, me ha ayudado a perder el miedo a hacer actividades que pensaba que no podría.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/serie.png" class="d-block w-100 img-fluid carousel-image" alt="Series y películas">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Series y Películas</h5>
+                            <p>Ver películas y series hace parte de mis días libres. Me entretengo con las tramas que me llaman 
+                               la atención y es una forma de descansar de mis responsabilidades cuando no tengo energía para actividades físicas.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselPasatiempos" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselPasatiempos" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </div>
+    </section>
 
-<section class="container-fluid" id="proyectos">
-    <div class="row">
-        <div class="col-sm-6">
-            <div class="card" style="width: 18rem;">
-                <img src="../sin_framework/assets/images/leer.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <!-- SECCIÓN 4: PROYECTOS -->
+    <section class="container-fluid py-5 bg-light" id="proyectos">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Mis Proyectos</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card project-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fas fa-chart-line me-2"></i>Aplicación Web para Acciones
+                            </h5>
+                            <p class="card-text">
+                                Sistema web para el seguimiento y análisis de acciones bursátiles. 
+                                Incluye gráficos en tiempo real y alertas personalizadas.
+                            </p>
+                            <div class="technologies mb-3">
+                                <span class="badge bg-primary me-1">.Net SDK 8</span>
+                                <span class="badge bg-info me-1">Visual Studio 2022</span>
+                                <span class="badge bg-warning text-dark me-1">Node.js y npm</span>
+                                <span class="badge bg-success">SSMS</span>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary">Ver proyecto</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                    <div class="card project-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fas fa-shopping-cart me-2"></i>Tienda Virtual
+                            </h5>
+                            <p class="card-text">
+                                E-commerce completo con carrito de compras, gestión de productos 
+                                y sistema de pagos simulado.
+                            </p>
+                            <div class="technologies mb-3">
+                                <span class="badge bg-primary me-1">Bootstrap</span>
+                                <span class="badge bg-info me-1">HTML</span>
+                                <span class="badge bg-warning text-dark me-1">CSS</span>
+                                <span class="badge bg-success">JavaScript</span>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary">Ver proyecto</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-sm-6">
-            <div class="card" style="width: 18rem;">
-                <img src="../sin_framework/assets/images/leer.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </section>
+
+    <!-- SECCIÓN 5: CONTACTO -->
+    <section class="container-fluid py-5" id="contacto">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Contacto</h2>
+            <div class="row">
+                <div class="col-lg-8">
+                    <form id="contacto_Form" class="contact-form">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="name" class="form-label">Nombre completo <span class="required">*</span></label>
+                                <input type="text" class="form-control" id="name" name="name">
+                                <div class="invalid-feedback" id="errorName"></div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="email" class="form-label">Correo electrónico <span class="required">*</span></label>
+                                <input type="email" class="form-control" id="email" name="email">
+                                <div class="invalid-feedback" id="errorEmail"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="phone" class="form-label">Teléfono</label>
+                                <input type="tel" class="form-control" id="phone" name="phone">
+                                <div class="invalid-feedback" id="errorPhone"></div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="subject" class="form-label">Asunto de contacto <span class="required">*</span></label>
+                                <select class="form-select" id="subject" name="subject">
+                                    <option value="">Seleccionar asunto...</option>
+                                    <option value="consulta">Consulta general</option>
+                                    <option value="soporte">Soporte técnico</option>
+                                    <option value="entrevista">Entrevista</option>
+                                    <option value="colaboracion">Colaboración</option>
+                                    <option value="otros">Otros</option>
+                                </select>
+                                <div class="invalid-feedback" id="errorSubject"></div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <fieldset>
+                                <legend class="form-label">Preferencia de contacto</legend>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="contactoOpcion" 
+                                                   id="contactEmail" value="Email" checked>
+                                            <label class="form-check-label" for="contactEmail">
+                                                Correo electrónico
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="contactoOpcion" 
+                                                   id="contactPhone" value="Telefono">
+                                            <label class="form-check-label" for="contactPhone">
+                                                Teléfono
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="contactoOpcion" 
+                                                   id="contactWhatsapp" value="WhatsApp">
+                                            <label class="form-check-label" for="contactWhatsapp">
+                                                WhatsApp
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label">Mensaje</label>
+                            <textarea class="form-control" name="mensaje" id="mensaje" rows="5"></textarea>
+                            <div class="invalid-feedback" id="errorMensaje"></div>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="terms" name="terms">
+                            <label class="form-check-label" for="terms">
+                                Acepto los <a href="#" class="text-primary">términos y condiciones</a> 
+                                y la política de privacidad <span class="required">*</span>
+                            </label>
+                            <div class="invalid-feedback" id="errorTerms"></div>
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg" id="enviarContacto">
+                                <i class="fas fa-paper-plane me-2"></i>Enviar mensaje
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Lista de contactos -->
+                <div class="col-lg-4">
+                    <div class="contact-list">
+                        <h4>Contactos guardados</h4>
+                        <div class="d-flex justify-content-between mb-3">
+                            <button class="btn btn-sm btn-outline-primary" onclick="contactFacade.listarContactos()">
+                                <i class="fas fa-refresh me-1"></i>Actualizar
+                            </button>
+                            <button class="btn btn-sm btn-outline-danger" onclick="contactFacade.borrarTodo()">
+                                <i class="fas fa-trash me-1"></i>Borrar todo
+                            </button>
+                        </div>
+                        <div id="listaContactos" class="contact-items">
+                            <!-- Los contactos se cargarán aquí dinámicamente -->
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Formulario de Contacto-->
+    <!-- FOOTER -->
+    <footer class="footer-personal py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 text-white">© 2025 Karold Delgado. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-github"></i></a>
+                        <a href="#" class="text-white"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-<section class="container-fluid" id="contacto">
-    <div class="form-floating">
-        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-        <label for="floatingTextarea">Nombre</label>
-    </div>
-    <div class="form-floating mb-3">
-        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-        <label for="floatingInput">Correo Electronico</label>
-    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
-</section>
-
+    <!-- Toastify JS -->
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    
+    <!-- JavaScript personalizado -->
+    <script src="js/contacto/domain/Contacto.js"></script>
+    <script src="js/contacto/repository/ContactRepository.js"></script>
+    <script src="js/contacto/facade/ContactFacade.js"></script>
 
 </body>
 </html>
