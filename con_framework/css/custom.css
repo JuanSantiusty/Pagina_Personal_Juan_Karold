@@ -1,64 +1,64 @@
 /* ========================================
    VARIABLES CSS PERSONALIZADAS
    ======================================== */
-:root {
-  --primary-color: #0d6efd;
-  --secondary-color: #6c757d;
-  --accent-color: #0dcaf0;
-  --success-color: #198754;
-  --warning-color: #ffc107;
-  --danger-color: #dc3545;
-  --light-bg: #f8f9fa;
-  --dark-bg: #212529;
-  --text-color: #333;
-  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  --gradient-accent: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --shadow-light: 0 2px 15px rgba(0, 0, 0, 0.08);
-  --shadow-medium: 0 5px 30px rgba(0, 0, 0, 0.12);
-  --shadow-heavy: 0 10px 40px rgba(0, 0, 0, 0.16);
-  --border-radius: 1rem;
-  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+:root {                                                                         /* selector del nodo raíz del documento - variables globales */
+  --primary-color: #0d6efd;                                                   /* Color principal de la marca o tema (botones, enlaces, navbar). */
+  --secondary-color: #6c757d;                                                 /* Color secundario para elementos menos destacados. */
+  --accent-color: #0dcaf0;                                                    /* Color de acento para destacar elementos importantes. */
+--success-color: #198754;                                                     /* Color para indicar éxito o confirmación. */
+  --warning-color: #ffc107;                                                   /* Color para advertencias o alertas. */
+  --danger-color: #dc3545;                                                    /* Color para errores o acciones peligrosas. */
+  --light-bg: #f8f9fa;                                                        /* Color de fondo claro para secciones y tarjetas. */
+  --dark-bg: #212529;                                                         /* Color de fondo oscuro para secciones y tarjetas. */
+  --text-color: #333;                                                         /* Color principal del texto para buena legibilidad. */
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);    /* Degradado para fondos y botones. */
+  --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);  /* Degradado secundario para fondos y botones. */
+  --gradient-accent: linear-gradient(135deg, #667eea 0%, #764ba2 100%);     /* Degradado de acento para destacar elementos. */
+  --shadow-light: 0 2px 15px rgba(0, 0, 0, 0.08);                             /* Sombra ligera para tarjetas y botones. */
+  --shadow-medium: 0 5px 30px rgba(0, 0, 0, 0.12);                            /* Sombra media para secciones y modales. */
+  --shadow-heavy: 0 10px 40px rgba(0, 0, 0, 0.16);                            /* Sombra pesada para elementos destacados. */
+  --border-radius: 1rem;                                                        /* Radio de borde para botones, tarjetas y otros elementos. */
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);                          /* Transición suave para interacciones. */
 }
 
 /* ========================================
-   ESTILOS GENERALES MEJORADOS
+   ESTILOS GENERALES
    ======================================== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+* {                                                                             /* selector universal - afecta a todos los elementos */
+  margin: 0;                                                                    /* elimina márgenes predeterminados */
+  padding: 0;                                                                   /* elimina rellenos predeterminados */
+  box-sizing: border-box;                                                       /* incluye padding y border en el tamaño total del elemento */
 }
 
-body {
-  font-family: 'Roboto Serif', serif;
-  line-height: 1.6;
-  color: var(--text-color);
-  overflow-x: hidden;
-  background: #fff;
-  font-size: 16px;
+body {                                                                          /* estilos para el cuerpo del documento */
+  font-family: 'Roboto Serif', serif;                                           /* Tipografía moderna y legible */
+  line-height: 1.6;                                                             /* Espaciado adecuado entre líneas */
+  color: var(--text-color);                                                     /* Color de texto definido en variables */
+  overflow-x: hidden;                                                           /* evita scroll horizontal */
+  background: #fff;                                                           /* Fondo blanco limpio */
+  font-size: 16px;                                                              /* Tamaño base de fuente */
 }
 
-html {
-  scroll-behavior: smooth;
+html {                                                                          /* estilos para el elemento raíz HTML */
+  scroll-behavior: smooth;                                                      /* desplazamiento suave para anclas */
 }
 
 /* ========================================
-   HEADER PRINCIPAL MEJORADO
+   HEADER PRINCIPAL
    ======================================== */
-.header-personal {
-  background: var(--gradient-primary);
-  color: white;
-  position: relative;
-  overflow: hidden;
-  padding: 4rem 0;
-  min-height: 300px;
-  display: flex;
-  align-items: center;
+.header-personal { 
+  background: var(--gradient-primary);                                          /* Degradado de fondo */
+  color: white;                                                               /* Texto blanco para contraste */
+  position: relative;                                                           /* para elementos pseudo */
+  overflow: hidden;                                                             /* para efectos visuales */
+  padding: 4rem 0;                                                              /* Espaciado vertical */
+  min-height: 300px;                                                            /* Altura mínima */
+  display: flex;                                                                /* Flexbox para centrar contenido */
+  align-items: center;                                                          /* Centrado vertical */
 }
 
-.header-personal::before {
-  content: '';
+.header-personal::before {                                                      /* Efecto visual con gradientes radiales */
+  content: '';                                                                  /* contenido vacío para pseudo-elemento */
   position: absolute;
   top: 0;
   left: 0;
@@ -71,7 +71,7 @@ html {
   opacity: 0.3;
 }
 
-.header-personal::after {
+.header-personal::after {                                                       /* Efecto de brillo sutil */
   content: '';
   position: absolute;
   bottom: 0;
@@ -81,7 +81,7 @@ html {
   background: linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent);
 }
 
-.header-personal .display-4 {
+.header-personal .display-4 { /* Título principal */
   position: relative;
   z-index: 2;
   text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -91,7 +91,7 @@ html {
   animation: fadeInDown 1s ease-out;
 }
 
-.header-personal .lead {
+.header-personal .lead { /* Subtítulo */
   position: relative;
   z-index: 2;
   font-size: 1.25rem;
@@ -101,9 +101,9 @@ html {
 }
 
 /* ========================================
-   NAVBAR MEJORADA
+   NAVBAR 
    ======================================== */
-.navbar {
+.navbar { /* estilos para la barra de navegación */
   transition: var(--transition);
   box-shadow: var(--shadow-medium);
   background: var(--gradient-primary) !important;
@@ -111,17 +111,17 @@ html {
   border: none;
 }
 
-.navbar-brand {
+.navbar-brand { /* marca o logo en la navbar */
   font-weight: 700;
   font-size: 1.5rem;
   color: white !important;
 }
 
-.navbar-nav {
+.navbar-nav { /* contenedor de los enlaces de navegación */
   gap: 0.5rem;
 }
 
-.navbar-nav .nav-link {
+.navbar-nav .nav-link { /* estilos para los enlaces de navegación */
   font-weight: 500;
   margin: 0;
   padding: 0.7rem 1.2rem !important;
@@ -132,7 +132,7 @@ html {
   overflow: hidden;
 }
 
-.navbar-nav .nav-link::before {
+.navbar-nav .nav-link::before { /* efecto de resplandor al pasar el mouse */
   content: '';
   position: absolute;
   top: 0;
@@ -143,20 +143,20 @@ html {
   transition: var(--transition);
 }
 
-.navbar-nav .nav-link:hover::before {
+.navbar-nav .nav-link:hover::before { /* animación del resplandor */
   left: 0;
 }
 
-.navbar-nav .nav-link:hover {
-  color: white !important;
+.navbar-nav .nav-link:hover { /* estilos al pasar el mouse sobre los enlaces */
+  color: white !important; 
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* ========================================
-   TÍTULOS DE SECCIÓN MEJORADOS
+   TÍTULOS DE SECCIÓN
    ======================================== */
-.section-title {
+.section-title { /* estilos para los títulos de sección */
   position: relative;
   color: var(--primary-color);
   font-weight: 700;
@@ -165,7 +165,7 @@ html {
   font-size: 2.5rem;
 }
 
-.section-title::before {
+.section-title::before { 
   content: '';
   position: absolute;
   top: -10px;
@@ -190,7 +190,7 @@ html {
 }
 
 /* ========================================
-   SECCIÓN INICIO MEJORADA
+   SECCIÓN INICIO
    ======================================== */
 .info-personal {
   padding: 3rem;
@@ -311,7 +311,7 @@ html {
 }
 
 /* ========================================
-   TABLA DE ESTUDIOS MEJORADA
+   TABLA DE ESTUDIOS
    ======================================== */
 .table {
   border-radius: var(--border-radius);
@@ -372,7 +372,7 @@ html {
 }
 
 /* ========================================
-   CARRUSEL COMPLETAMENTE MEJORADO
+   CARRUSEL
    ======================================== */
 .carousel {
   border-radius: var(--border-radius);
@@ -505,7 +505,7 @@ html {
 }
 
 /* ========================================
-   PROYECTOS MEJORADOS
+   PROYECTOS
    ======================================== */
 .project-card {
   transition: var(--transition);
@@ -596,7 +596,7 @@ html {
 }
 
 /* ========================================
-   FORMULARIO DE CONTACTO MEJORADO
+   FORMULARIO DE CONTACTO
    ======================================== */
 .contact-form {
   background: white;
@@ -687,7 +687,7 @@ html {
 }
 
 /* ========================================
-   LISTA DE CONTACTOS MEJORADA
+   LISTA DE CONTACTOS
    ======================================== */
 .contact-list {
   background: white;
@@ -765,7 +765,7 @@ html {
 }
 
 /* ========================================
-   FOOTER MEJORADO
+   FOOTER
    ======================================== */
 .footer-personal {
   background: var(--gradient-primary);
@@ -809,7 +809,7 @@ html {
 }
 
 /* ========================================
-   ANIMACIONES MEJORADAS
+   ANIMACIONES 
    ======================================== */
 @keyframes fadeInUp {
   from {
@@ -875,7 +875,6 @@ html {
   }
 }
 
-/* Aplicar animaciones mejoradas */
 .info-personal {
   animation: slideInLeft 0.8s ease-out;
 }
@@ -905,7 +904,7 @@ html {
 .table tbody tr:nth-child(3) { animation-delay: 0.3s; }
 
 /* ========================================
-   RESPONSIVE DESIGN MEJORADO
+   RESPONSIVE DESIGN 
    ======================================== */
 @media (max-width: 1200px) {
   .section-title {
@@ -1069,7 +1068,7 @@ html {
 }
 
 /* ========================================
-   UTILIDADES ADICIONALES MEJORADAS
+   UTILIDADES ADICIONALES
    ======================================== */
 .text-gradient {
   background: var(--gradient-primary);
@@ -1121,7 +1120,7 @@ html {
 }
 
 /* ========================================
-   SCROLLBAR PERSONALIZADA MEJORADA
+   SCROLLBAR PERSONALIZADA
    ======================================== */
 ::-webkit-scrollbar {
   width: 10px;
@@ -1208,7 +1207,7 @@ html {
 }
 
 /* ========================================
-   ESTADOS DE CARGA Y INTERACCIÓN
+   ESTADOS DE CARGA E INTERACCIÓN
    ======================================== */
 .loading {
   opacity: 0.6;
@@ -1236,7 +1235,7 @@ html {
 }
 
 /* ========================================
-   MEJORAS DE ACCESIBILIDAD
+   ACCESIBILIDAD
    ======================================== */
 .sr-only {
   position: absolute;
@@ -1250,7 +1249,7 @@ html {
   border: 0;
 }
 
-/* Focus visible mejorado */
+/* Focus visible */
 *:focus-visible {
   outline: 2px solid var(--primary-color);
   outline-offset: 2px;
@@ -1272,7 +1271,7 @@ html {
 }
 
 /* ========================================
-   TEMA OSCURO (Preparación futura)
+   TEMA OSCURO
    ======================================== */
 @media (prefers-color-scheme: dark) {
   :root {
